@@ -1,4 +1,4 @@
-# Compteur de Ventes Kits
+# Compteur de Ventes Kit
 
 Gère les ventes de différents kits et calcule un débit valorisé.
 
