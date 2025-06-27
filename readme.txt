@@ -1,4 +1,4 @@
-=== Compteur de Ventes Kit ===
+=== Gestion Vente Kits ===
 Contributors: hadrien
 Tags: ventes, kits, compteur, airsam
 Requires at least: 5.0
