@@ -21,7 +21,9 @@ class CompteurDeVentesKits {
 
         add_action('admin_menu', [$this, 'register_admin_menu']);
         add_shortcode('nombre_facades_respectees', [$this, 'shortcode_facades']);
+        add_shortcode('nombre_facades_respectees_nb', [$this, 'shortcode_facades_nb']);
         add_shortcode('debit_valorise', [$this, 'shortcode_debit']);
+        add_shortcode('debit_valorise_nb', [$this, 'shortcode_debit_nb']);
 
         add_action('wp_footer', [$this, 'print_debit_script_in_footer']);
         add_action('wp_ajax_get_debit_valorise', [$this, 'ajax_get_debit_valorise']);
@@ -307,9 +309,20 @@ class CompteurDeVentesKits {
         return "<span class='facades-label'>Nombre de façades respectées :</span> <span class='facades-count'>{$count}</span>";
     }
 
+    public function shortcode_facades_nb() {
+        global $wpdb;
+        $count = $wpdb->get_var("SELECT COUNT(id) FROM $this->ventes_table_name");
+        return "<span class='facades-count'>{$count}</span>";
+    }
+
     public function shortcode_debit() {
         $this->debit_shortcode_used = true;
         return "<span class='debit-label'>Débit valorisé par les produits Airsam :</span> <span class='debit-valorise-container debit-valorise-loading'>Chargement...</span>";
+    }
+
+    public function shortcode_debit_nb() {
+        $this->debit_shortcode_used = true;
+        return "<span class='debit-valorise-container debit-valorise-loading'>Chargement...</span>";
     }
 
     public function ajax_get_debit_valorise() {
