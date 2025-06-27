@@ -15,11 +15,18 @@ Gère les ventes de différents kits et calcule un débit valorisé.
 3. Configurez vos kits et ventes dans le menu « Compteur Ventes ».
 
 == Utilisation ==
-- [nombre_facades_respectees] : Affiche le nombre de façades respectées.
+- [nombre_facades_respectees] : Affiche la phrase + le nombre
   .facades-label : cible le texte
   .facades-count : cible le nombre
-- [debit_valorise] : Affiche le débit valorisé (mise à jour automatique).
+- [nombre_facades_respectees_nb] : Affiche uniquement le nombre
+  .facades-count : cible le nombre
+
+- [debit_valorise] : Affiche la phrase + la valeur dynamique
   .debit-label : cible le texte
+  .debit-valorise-container : cible la valeur
+  .debit-valorise-loading : état de chargement
+  .debit-valorise-value : état valeur affichée
+- [debit_valorise_nb] : Affiche uniquement la valeur dynamique
   .debit-valorise-container : cible la valeur
   .debit-valorise-loading : état de chargement
   .debit-valorise-value : état valeur affichée
@@ -34,4 +41,5 @@ Ajoutez ce CSS dans Elementor ou le customizer :
 
 == Changelog ==
 = 1.1 =
+* Ajout des shortcodes _nb pour affichage minimaliste.
 * Première version.
