@@ -6,7 +6,7 @@ Gère les ventes de différents kits et calcule un débit valorisé.
 
 - Gestion des ventes de kits via l’admin WordPress
 - Configuration des kits (nom, débit, constante)
-- Deux shortcodes pour affichage sur le site
+- Quatre shortcodes pour affichage sur le site
 - Débit valorisé mis à jour automatiquement (AJAX)
 - Compatible Elementor (personnalisation facile via CSS)
 
@@ -14,23 +14,29 @@ Gère les ventes de différents kits et calcule un débit valorisé.
 
 ### 1. Nombre de façades respectées
 
-```shortcode
-[nombre_facades_respectees]
-```
+- `[nombre_facades_respectees]`  
+  Affiche la phrase + le nombre  
+  - `.facades-label` : cible le texte  
+  - `.facades-count` : cible le nombre
 
-- `.facades-label` : cible le texte
-- `.facades-count` : cible le nombre
+- `[nombre_facades_respectees_nb]`  
+  Affiche uniquement le nombre  
+  - `.facades-count` : cible le nombre
 
 ### 2. Débit valorisé
 
-```shortcode
-[debit_valorise]
-```
+- `[debit_valorise]`  
+  Affiche la phrase + la valeur dynamique  
+  - `.debit-label` : cible le texte  
+  - `.debit-valorise-container` : cible la valeur  
+  - `.debit-valorise-loading` : état de chargement  
+  - `.debit-valorise-value` : état valeur affichée
 
-- `.debit-label` : cible le texte
-- `.debit-valorise-container` : cible la valeur
-- `.debit-valorise-loading` : état de chargement
-- `.debit-valorise-value` : état valeur affichée
+- `[debit_valorise_nb]`  
+  Affiche uniquement la valeur dynamique  
+  - `.debit-valorise-container` : cible la valeur  
+  - `.debit-valorise-loading` : état de chargement  
+  - `.debit-valorise-value` : état valeur affichée
 
 ## Exemple de CSS personnalisable
 
